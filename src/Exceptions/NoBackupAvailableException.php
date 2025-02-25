@@ -1,6 +1,6 @@
 <?php
 
-namespace Jackiedo\DotenvEditor\Exceptions;
+namespace Bangsystems\DotenvEditor\Exceptions;
 
 use Exception;
 

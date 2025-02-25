@@ -1,6 +1,6 @@
 <?php
 
-namespace Jackiedo\DotenvEditor\Contracts;
+namespace Bangsystems\DotenvEditor\Contracts;
 
 interface ReaderInterface
 {

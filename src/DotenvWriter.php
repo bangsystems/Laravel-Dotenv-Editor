@@ -1,15 +1,15 @@
 <?php
 
-namespace Jackiedo\DotenvEditor;
+namespace Bangsystems\DotenvEditor;
 
-use Jackiedo\DotenvEditor\Contracts\FormatterInterface;
-use Jackiedo\DotenvEditor\Contracts\WriterInterface;
-use Jackiedo\DotenvEditor\Exceptions\UnableWriteToFileException;
+use Bangsystems\DotenvEditor\Contracts\FormatterInterface;
+use Bangsystems\DotenvEditor\Contracts\WriterInterface;
+use Bangsystems\DotenvEditor\Exceptions\UnableWriteToFileException;
 
 /**
- * The DotenvWriter writer.
+ * The DotenvWriter class.
  *
- * @package Jackiedo\DotenvEditor
+ * @package Bangsystems\DotenvEditor
  *
  * @author Jackie Do <anhvudo@gmail.com>
  */
@@ -25,7 +25,7 @@ class DotenvWriter implements WriterInterface
     /**
      * The instance of Formatter.
      *
-     * @var \Jackiedo\DotenvEditor\Workers\Formatters\Formatter
+     * @var \Bangsystems\DotenvEditor\Workers\Formatters\Formatter
      */
     protected $formatter;
 

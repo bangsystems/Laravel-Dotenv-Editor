@@ -1,14 +1,14 @@
 <?php
 
-namespace Jackiedo\DotenvEditor\Workers\Formatters;
+namespace Bangsystems\DotenvEditor\Workers\Formatters;
 
-use Jackiedo\DotenvEditor\Contracts\FormatterInterface;
-use Jackiedo\DotenvEditor\Exceptions\InvalidKeyException;
+use Bangsystems\DotenvEditor\Contracts\FormatterInterface;
+use Bangsystems\DotenvEditor\Exceptions\InvalidKeyException;
 
 /**
  * The .env formatter.
  *
- * @package Jackiedo\DotenvEditor
+ * @package Bangsystems\DotenvEditor
  *
  * @author Jackie Do <anhvudo@gmail.com>
  */

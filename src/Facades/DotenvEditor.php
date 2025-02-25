@@ -1,13 +1,13 @@
 <?php
 
-namespace Jackiedo\DotenvEditor\Facades;
+namespace Bangsystems\DotenvEditor\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * The DotenvEditor facade.
  *
- * @package Jackiedo\DotenvEditor\Facades
+ * @package Bangsystems\DotenvEditor\Facades
  *
  * @author Jackie Do <anhvudo@gmail.com>
  */

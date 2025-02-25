@@ -1,6 +1,6 @@
 <?php
 
-namespace Jackiedo\DotenvEditor\Entities;
+namespace Bangsystems\DotenvEditor\Entities;
 
 use Illuminate\Support\Collection;
 

@@ -1,15 +1,15 @@
 <?php
 
-namespace Jackiedo\DotenvEditor;
+namespace Bangsystems\DotenvEditor;
 
-use Jackiedo\DotenvEditor\Contracts\ParserInterface;
-use Jackiedo\DotenvEditor\Contracts\ReaderInterface;
-use Jackiedo\DotenvEditor\Exceptions\UnableReadFileException;
+use Bangsystems\DotenvEditor\Contracts\ParserInterface;
+use Bangsystems\DotenvEditor\Contracts\ReaderInterface;
+use Bangsystems\DotenvEditor\Exceptions\UnableReadFileException;
 
 /**
  * The DotenvReader class.
  *
- * @package Jackiedo\DotenvEditor
+ * @package Bangsystems\DotenvEditor
  *
  * @author Jackie Do <anhvudo@gmail.com>
  */
@@ -23,9 +23,9 @@ class DotenvReader implements ReaderInterface
     protected $filePath;
 
     /**
-     * The instance of Parser.
+     * The parser instance.
      *
-     * @var \Jackiedo\DotenvEditor\Workers\Parsers\Parser
+     * @var \Bangsystems\DotenvEditor\Workers\Parsers\Parser
      */
     protected $parser;
 

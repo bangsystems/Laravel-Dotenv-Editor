@@ -1,10 +1,12 @@
 # Laravel Dotenv Editor
 ![laravel-dotenv-editor](https://cloud.githubusercontent.com/assets/9862115/25982836/029612b2-370a-11e7-82c5-d9146dc914a1.png)
 
-[![Latest Stable Version](https://poser.pugx.org/jackiedo/dotenv-editor/v/stable)](https://packagist.org/packages/jackiedo/dotenv-editor)
-[![Total Downloads](https://poser.pugx.org/jackiedo/dotenv-editor/downloads)](https://packagist.org/packages/jackiedo/dotenv-editor)
-[![Latest Unstable Version](https://poser.pugx.org/jackiedo/dotenv-editor/v/unstable)](https://packagist.org/packages/jackiedo/dotenv-editor)
-[![License](https://poser.pugx.org/jackiedo/dotenv-editor/license)](https://packagist.org/packages/jackiedo/dotenv-editor)
+> **Note:** This package is a fork of [jackiedo/dotenv-editor](https://github.com/JackieDo/Laravel-Dotenv-Editor). All credit for the original work goes to [Jackie Do](https://github.com/JackieDo).
+
+[![Latest Stable Version](https://poser.pugx.org/bangsystems/dotenv-editor/v/stable)](https://packagist.org/packages/bangsystems/dotenv-editor)
+[![Total Downloads](https://poser.pugx.org/bangsystems/dotenv-editor/downloads)](https://packagist.org/packages/bangsystems/dotenv-editor)
+[![Latest Unstable Version](https://poser.pugx.org/bangsystems/dotenv-editor/v/unstable)](https://packagist.org/packages/bangsystems/dotenv-editor)
+[![License](https://poser.pugx.org/bangsystems/dotenv-editor/license)](https://packagist.org/packages/bangsystems/dotenv-editor)
 
 Laravel Dotenv Editor is the .env file editor (or files with same structure and syntax) for Laravel 5.8+. Now you can easily edit .env files with the following features:
 
@@ -50,14 +52,25 @@ Look at one of the following topics to learn more about Laravel Dotenv Editor:
 You can install this package through [Composer](https://getcomposer.org). At the root of your application directory, run the following command (in any terminal client):
 
 ```shell
-$ composer require jackiedo/dotenv-editor
+$ composer require bangsystems/dotenv-editor
 ```
+
+Once this operation is complete, simply add the service provider to your project's `config/app.php` file if you're using Laravel version older than 5.5:
+
+```php
+'providers' => [
+    // Other service providers...
+    Bangsystems\DotenvEditor\DotenvEditorServiceProvider::class,
+],
+```
+
+For Laravel 5.5 or newer, this package will be automatically discovered and you can start using it right away.
 
 ## Configuration
 To start using the package, you should publish the configuration file so that you can configure the package as needed. To do that, run the following command (in any terminal client) at the root of your application:
 
 ```shell
-$ php artisan vendor:publish --provider="Jackiedo\DotenvEditor\DotenvEditorServiceProvider" --tag="config"
+$ php artisan vendor:publish --provider="Bangsystems\DotenvEditor\DotenvEditorServiceProvider" --tag="config"
 ```
 
 This will create a `config/dotenv-editor.php` file in your app that you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases. Currently there are the following settings:
@@ -73,39 +86,39 @@ The `alwaysCreateBackupFolder` setting is used to request that the backup folder
 
 ## Usage
 ### Working with facade
-Laravel Dotenv Editor has a facade with the name `Jackiedo\DotenvEditor\Facades\DotenvEditor`. You can perform all operations through this facade.
+Laravel Dotenv Editor has a facade with the name `Bangsystems\DotenvEditor\Facades\DotenvEditor`. You can perform all operations through this facade.
 
-**Example:**
+Example:
 
 ```php
-<?php namespace Your\Namespace;
+<?php
 
-// ...
+namespace App\Http\Controllers;
 
-use Jackiedo\DotenvEditor\Facades\DotenvEditor;
+use Bangsystems\DotenvEditor\Facades\DotenvEditor;
 
-class YourClass
+class HomeController extends Controller
 {
-    public function yourMethod()
+    public function index()
     {
-        $return = DotenvEditor::doSomething();
+        $content = DotenvEditor::getContent();
     }
 }
 ```
 
 ### Using dependency injection
-This package also supports dependency injection. You can easily inject an instance of the `Jackiedo\DotenvEditor\DotenvEditor` class into your controller or other classes.
+This package also supports dependency injection. You can easily inject an instance of the `Bangsystems\DotenvEditor\DotenvEditor` class into your controller or other classes.
 
-**Example:**
+Example:
 
 ```php
-<?php namespace App\Http\Controllers;
+<?php
 
-// ...
+namespace App\Http\Controllers;
 
-use Jackiedo\DotenvEditor\DotenvEditor;
+use Bangsystems\DotenvEditor\DotenvEditor;
 
-class TestDotenvEditorController extends Controller
+class HomeController extends Controller
 {
     protected $editor;
 
@@ -114,9 +127,9 @@ class TestDotenvEditorController extends Controller
         $this->editor = $editor;
     }
 
-    public function doSomething()
+    public function index()
     {
-        $return = $this->editor->doSomething();
+        $content = $this->editor->getContent();
     }
 }
 ```
@@ -738,7 +751,7 @@ This package will throw exceptions if something goes wrong. This way it's easier
 | *UnableWriteToFileException* | When unable to write to the file.              |
 
 # Contributors
-This project exists thanks to all its [contributors](https://github.com/JackieDo/Laravel-Dotenv-Editor/graphs/contributors).
+This project is a fork of [jackiedo/dotenv-editor](https://github.com/JackieDo/Laravel-Dotenv-Editor). All credit for the original work goes to [Jackie Do](https://github.com/JackieDo) and all [contributors](https://github.com/JackieDo/Laravel-Dotenv-Editor/graphs/contributors) of the original project.
 
 # License
 [MIT](LICENSE) © Jackie Do

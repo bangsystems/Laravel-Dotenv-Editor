@@ -1,14 +1,14 @@
 <?php
 
-namespace Jackiedo\DotenvEditor\Workers\Parsers;
+namespace Bangsystems\DotenvEditor\Workers\Parsers;
 
-use Jackiedo\DotenvEditor\Contracts\ParserInterface;
-use Jackiedo\DotenvEditor\Exceptions\InvalidValueException;
+use Bangsystems\DotenvEditor\Contracts\ParserInterface;
+use Bangsystems\DotenvEditor\Exceptions\InvalidValueException;
 
 /**
  * The reader parser V3 class.
  *
- * @package Jackiedo\DotenvEditor
+ * @package Bangsystems\DotenvEditor
  *
  * @author Jackie Do <anhvudo@gmail.com>
  */

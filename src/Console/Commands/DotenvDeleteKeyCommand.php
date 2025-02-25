@@ -1,10 +1,10 @@
 <?php
 
-namespace Jackiedo\DotenvEditor\Console\Commands;
+namespace Bangsystems\DotenvEditor\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
-use Jackiedo\DotenvEditor\Console\Traits\CreateCommandInstanceTrait;
+use Bangsystems\DotenvEditor\Console\Traits\CreateCommandInstanceTrait;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 

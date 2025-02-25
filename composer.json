@@ -1,9 +1,13 @@
 {
-    "name": "jackiedo/dotenv-editor",
-    "description": "The .env file editor tool for Laravel 5.8+",
+    "name": "bangsystems/dotenv-editor",
+    "description": "The .env file editor tool for Laravel",
     "license": "MIT",
-    "keywords": ["laravel", "dotenv", "dotenv-editor"],
+    "keywords": ["laravel", "dotenv", "dotenv-editor", "bangsystems"],
     "authors": [
+        {
+            "name": "Luke Hebblethwaite",
+            "email": "luke@nexuscare.co.uk"
+        },
         {
             "name": "Jackie Do",
             "email": "anhvudo@gmail.com"
@@ -17,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Jackiedo\\DotenvEditor\\": "src"
+            "Bangsystems\\DotenvEditor\\": "src"
         }
     },
     "extra": {
@@ -26,10 +30,10 @@
         },
         "laravel": {
             "providers": [
-                "Jackiedo\\DotenvEditor\\DotenvEditorServiceProvider"
+                "Bangsystems\\DotenvEditor\\DotenvEditorServiceProvider"
             ],
             "aliases": {
-                "DotenvEditor": "Jackiedo\\DotenvEditor\\Facades\\DotenvEditor"
+                "DotenvEditor": "Bangsystems\\DotenvEditor\\Facades\\DotenvEditor"
             }
         }
     },

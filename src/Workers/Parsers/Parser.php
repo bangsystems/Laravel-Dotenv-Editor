@@ -1,13 +1,13 @@
 <?php
 
-namespace Jackiedo\DotenvEditor\Workers\Parsers;
+namespace Bangsystems\DotenvEditor\Workers\Parsers;
 
-use Jackiedo\DotenvEditor\Exceptions\InvalidValueException;
+use Bangsystems\DotenvEditor\Exceptions\InvalidValueException;
 
 /**
  * The Parser abstract.
  *
- * @package Jackiedo\DotenvEditor
+ * @package Bangsystems\DotenvEditor
  *
  * @author Jackie Do <anhvudo@gmail.com>
  */

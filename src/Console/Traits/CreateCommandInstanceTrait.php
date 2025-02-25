@@ -1,8 +1,8 @@
 <?php
 
-namespace Jackiedo\DotenvEditor\Console\Traits;
+namespace Bangsystems\DotenvEditor\Console\Traits;
 
-use Jackiedo\DotenvEditor\DotenvEditor;
+use Bangsystems\DotenvEditor\DotenvEditor;
 
 trait CreateCommandInstanceTrait
 {

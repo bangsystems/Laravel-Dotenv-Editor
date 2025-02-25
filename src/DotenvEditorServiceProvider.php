@@ -1,20 +1,20 @@
 <?php
 
-namespace Jackiedo\DotenvEditor;
+namespace Bangsystems\DotenvEditor;
 
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
-use Jackiedo\DotenvEditor\Console\Commands\DotenvBackupCommand;
-use Jackiedo\DotenvEditor\Console\Commands\DotenvDeleteKeyCommand;
-use Jackiedo\DotenvEditor\Console\Commands\DotenvGetBackupsCommand;
-use Jackiedo\DotenvEditor\Console\Commands\DotenvGetKeysCommand;
-use Jackiedo\DotenvEditor\Console\Commands\DotenvRestoreCommand;
-use Jackiedo\DotenvEditor\Console\Commands\DotenvSetKeyCommand;
+use Bangsystems\DotenvEditor\Console\Commands\DotenvBackupCommand;
+use Bangsystems\DotenvEditor\Console\Commands\DotenvDeleteKeyCommand;
+use Bangsystems\DotenvEditor\Console\Commands\DotenvGetBackupsCommand;
+use Bangsystems\DotenvEditor\Console\Commands\DotenvGetKeysCommand;
+use Bangsystems\DotenvEditor\Console\Commands\DotenvRestoreCommand;
+use Bangsystems\DotenvEditor\Console\Commands\DotenvSetKeyCommand;
 
 /**
  * DotenvEditorServiceProvider.
  *
- * @package Jackiedo\DotenvEditor
+ * @package Bangsystems\DotenvEditor
  *
  * @author Jackie Do <anhvudo@gmail.com>
  */

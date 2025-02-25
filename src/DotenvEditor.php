@@ -1,22 +1,22 @@
 <?php
 
-namespace Jackiedo\DotenvEditor;
+namespace Bangsystems\DotenvEditor;
 
 use Illuminate\Contracts\Config\Repository as Config;
 use Illuminate\Contracts\Container\Container;
-use Jackiedo\DotenvEditor\Exceptions\FileNotFoundException;
-use Jackiedo\DotenvEditor\Exceptions\KeyNotFoundException;
-use Jackiedo\DotenvEditor\Exceptions\NoBackupAvailableException;
-use Jackiedo\DotenvEditor\Workers\Formatters\Formatter;
-use Jackiedo\DotenvEditor\Workers\Parsers\ParserV1;
-use Jackiedo\DotenvEditor\Workers\Parsers\ParserV2;
-use Jackiedo\DotenvEditor\Workers\Parsers\ParserV3;
+use Bangsystems\DotenvEditor\Exceptions\FileNotFoundException;
+use Bangsystems\DotenvEditor\Exceptions\KeyNotFoundException;
+use Bangsystems\DotenvEditor\Exceptions\NoBackupAvailableException;
+use Bangsystems\DotenvEditor\Workers\Formatters\Formatter;
+use Bangsystems\DotenvEditor\Workers\Parsers\ParserV1;
+use Bangsystems\DotenvEditor\Workers\Parsers\ParserV2;
+use Bangsystems\DotenvEditor\Workers\Parsers\ParserV3;
 use Jackiedo\PathHelper\Path;
 
 /**
  * The DotenvEditor class.
  *
- * @package Jackiedo\DotenvEditor
+ * @package Bangsystems\DotenvEditor
  *
  * @author Jackie Do <anhvudo@gmail.com>
  */
