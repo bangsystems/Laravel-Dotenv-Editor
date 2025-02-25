@@ -36,7 +36,7 @@ class DotenvBackupCommand extends Command
      *
      * @return mixed
      */
-    public function fire()
+    public function handle()
     {
         $filePath       = $this->stringToType($this->option('filepath'));
         $this->filePath = (is_string($filePath)) ? base_path($filePath) : null;
@@ -45,7 +45,17 @@ class DotenvBackupCommand extends Command
 
         $backup = $this->editor->load($this->filePath)->backup()->getLatestBackup();
 
-        $this->info("Your file was backed up successfully at path [{$backup['filepath']}].");
+        $this->info("Your file was backed up successfully at path [{$backup['filepath']}
+
+    /**
+     * Alias for the handle method for backwards compatibility.
+     *
+     * @return mixed
+     */
+    public function fire()
+    {
+        return $this->handle();
+    }].");
     }
 
     /**

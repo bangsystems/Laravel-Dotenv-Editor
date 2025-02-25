@@ -55,7 +55,7 @@ class DotenvEditor
      * @var array
      */
     protected $combatibleParserMap = [
-        '5.0.0' => ParserV3::class,  // Laravel 8.x|9.x using "vlucas/dotenv" ^v5.0|^5.4
+        '5.0.0' => ParserV3::class,  // Laravel 8.x|9.x|10.x|11.x|12.x using "vlucas/dotenv" ^v5.0|^5.4|^5.6
         '4.0.0' => ParserV2::class,  // Laravel 7.x using "vlucas/dotenv" ^v4.0
         '3.3.0' => ParserV1::class,  // Laravel 5.8|6.x using "vlucas/dotenv" ^v3.3
     ];

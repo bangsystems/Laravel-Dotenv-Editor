@@ -46,13 +46,23 @@ class DotenvDeleteKeyCommand extends Command
      *
      * @return mixed
      */
-    public function fire()
+    public function handle()
     {
         $this->transferInputsToProperties();
 
         if (!$this->confirmToProceed()) {
             return false;
         }
+
+    /**
+     * Alias for the handle method for backwards compatibility.
+     *
+     * @return mixed
+     */
+    public function fire()
+    {
+        return $this->handle();
+    }
 
         $this->line('Deleting key in your file...');
         $this->editor->load($this->filePath)->deleteKey($this->key)->save();

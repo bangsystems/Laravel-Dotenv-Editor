@@ -29,7 +29,7 @@ class DotenvGetBackupsCommand extends Command
      *
      * @return mixed
      */
-    public function fire()
+    public function handle()
     {
         $headers = ['File name', 'File path', 'Created at'];
         $backups = ($this->option('latest')) ? [$this->editor->getLatestBackup()] : $this->editor->getBackups();
@@ -40,7 +40,17 @@ class DotenvGetBackupsCommand extends Command
             if (!is_null($latest)) {
                 $backups = [$latest];
                 $total = 1;
-            } else {
+            }
+
+    /**
+     * Alias for the handle method for backwards compatibility.
+     *
+     * @return mixed
+     */
+    public function fire()
+    {
+        return $this->handle();
+    } else {
                 $total = 0;
             }
         } else {
